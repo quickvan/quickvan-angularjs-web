@@ -1,0 +1,34 @@
+<div class="container-m interna">
+
+	<h1 class="upper center">Agendamento de Viagem</h1>
+
+	<form name="form-veiculo" action="javascript:;" ng-submit="save()">        
+		<br>
+		<p>#10 - Van</p>
+
+		<div class="clearfix">
+			<input type="text" name="ipt-travel-date" class="ipt half" placeholder="Data da ida" required disabled value="10/01/2017">
+			<input type="text" name="ipt-travel-hour" class="ipt half" placeholder="Horário" required disabled value="10:00">
+		</div>
+
+		<div class="clearfix">
+			<input type="text" name="ipt-travel-date-back" class="ipt half" placeholder="Data da volta" required disabled value="10/01/2017">
+			<input type="text" name="ipt-travel-hour-back" class="ipt half" placeholder="Horário" required disabled value="18:00">
+		</div>
+
+		<input type="text" name="ipt-origin" class="ipt" placeholder="Origem" required disabled value="Piquete">
+		<input type="text" name="ipt-destination" class="ipt" placeholder="Destino" required disabled value="Lorena">
+		<input type="number" name="ipt-capacity" class="ipt" placeholder="Lugares" required min="0" disabled value="14">
+
+		<input type="text" name="ipt-origin" class="ipt" placeholder="Insira um valor de orçamento para a viagem" required data-mask="money">
+		
+		<textarea name="ipt-obs" class="ipt medium" placeholder="Observação sobre o agendameno"></textarea> 
+
+		<div class="clearfix">
+			<input type="submit" class="btn primary half" value="Enviar orçamento">
+			<!-- <input type="submit" class="btn success half" value="Confirmar"> -->
+			<input type="button" class="btn cancel half" value="Não aceitar">
+		</div>
+	</form>
+
+</div>

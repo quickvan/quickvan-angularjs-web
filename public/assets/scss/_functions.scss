@@ -1,0 +1,4 @@
+@function colunas($cols) {
+	$width: 100 / $cols;
+	@return $width * 1%;
+}

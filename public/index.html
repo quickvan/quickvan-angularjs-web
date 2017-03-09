@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app">
+
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta charset="UTF-8">
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta http-equiv="Cache-Control" content="no-cache, no-store">
+	<meta http-equiv="Pragma" content="no-cache, no-store">
+
+	<link rel="icon" type="image/png" href="#">
+
+	<link rel="stylesheet" type="text/css" href="../bower_components/font-awesome/css/font-awesome.min.css" media="screen, print" />
+
+	<link rel="stylesheet" type="text/css" href="vendor/owl-carousel/owl.carousel.css" media="screen, print" />
+
+	<link rel="stylesheet" type="text/css" href="vendor/selectric/selectric.css" media="screen, print" />
+
+	<link rel="stylesheet" type="text/css" href="assets/css/style.css" media="screen, print" />
+</head>
+
+<body>
+	<div ng-include="'js/views/header.html'"></div>
+
+	<div class="site">
+	    <div ng-view>
+	    	
+	    </div>
+
+	    <div ng-include="'js/views/footer.html'"></div>
+    </div>
+
+    <script src="/bower_components/angular/angular.min.js"></script>
+	<script src="/bower_components/angular-resource/angular-resource.min.js"></script>
+	<script src="/bower_components/angular-route/angular-route.min.js"></script>
+	<script src="js/quickvan.js"></script>
+	<!-- Controllers -->
+	<script src="js/controllers/company/company-new.js"></script>
+	<script src="js/controllers/person/person.js"></script>
+	<!-- Services -->
+	<script src="js/services/company.js"></script>
+	<script src="js/services/person.js"></script>
+
+	<script src="../bower_components/jquery/dist/jquery.min.js"></script>
+	<script src="vendor/jquery/jquery.mask.min.js"></script>
+	<script src="vendor/owl-carousel/owl.carousel.min.js"></script>
+	<script src="vendor/selectric/jquery.selectric.js"></script>
+
+	<script src="assets/js/componentes/Common.js"></script>
+	<script src="assets/js/componentes/Menu.js"></script>
+	<script src="assets/js/upload-file.js"></script>
+</body>
+
+</html>

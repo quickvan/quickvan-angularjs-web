@@ -1,0 +1,53 @@
+<div class="container-m interna">
+
+	<h1 class="upper center">Veículo</h1>
+
+	<form name="form-veiculo" action="javascript:;" ng-submit="save()">
+		<!-- <div id="slideVehicle" class="owl-carousel">
+	        <div class="item" data-slide="1">
+	            	
+	        </div>
+	        <div class="item" data-slide="2">
+	            	
+	        </div>
+        </div> -->
+        
+		<input type="file" name="ipt-attachment" id="iptAttachment" class="file">
+		<label for="iptAttachment" id="lblAttachment" onclick="upload();">
+			<i class="fa fa-upload"></i> <span>Carregar imagem</span>
+		</label>
+
+			<select name="slc-vehicle-type" class="slc" required>	
+				<option value="V">Van</option>
+				<option value="O">Ônibus</option>
+				<option value="M">Micro-ônibus</option>
+			</select>
+
+		<div class="clearfix">
+			<input type="number" name="ipt-capacity" class="ipt half" placeholder="Lugares" required min="0">
+			<input type="text" name="ipt-year" class="ipt half" placeholder="Ano" required>
+		</div>
+
+		<div>
+			<input type="checkbox" name="chk-ar" id="chk-ar" class="chk" value="S">
+        	<label for="chk-ar"><span></span><i class="fa fa-cloud"></i> Ar condicionado</label>
+        </div>
+        <div>
+        	<input type="checkbox" name="chk-tv" id="chk-tv" class="chk" value="S">
+        	<label for="chk-tv"><span></span><i class="fa fa-tv"></i> TV</label>
+        </div>
+        <div>
+        	<input type="checkbox" name="chk-wifi" id="chk-wifi" class="chk" value="S">
+        	<label for="chk-wifi"><span></span><i class="fa fa-wifi"></i> Wifi</label>
+        </div>
+        <div>
+        	<input type="checkbox" name="chk-banheiro" id="chk-banheiro" class="chk" value="S">
+        	<label for="chk-banheiro"><span></span><i class="fa fa-bath"></i> Banheiro</label>
+        </div>
+
+		<textarea name="ipt-obs" class="ipt medium" placeholder="Observação"></textarea> 
+
+		<input type="submit" class="btn primary" value="Salvar">
+	</form>
+
+</div>

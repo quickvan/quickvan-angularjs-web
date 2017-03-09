@@ -1,0 +1,251 @@
+@media screen and (min-width: 1366px) {
+    .container {
+        width: $note-container;
+    }
+}
+
+@media screen and (max-width: 1279px) {
+    .container {
+        width: $tablet-container;
+    }
+
+    .row .col {
+        width: colunas(2);
+    }
+
+    .how-it-work {
+        .row .col {
+            img {
+                width: 130px;
+            }
+        }
+    }
+
+    .company-details .logo, .vehicle-details .logo {
+        float: none;
+        height: 160px;
+        margin: 0 0 20px 0;
+        width: 100%;
+
+        img {
+            max-height: 95px;
+        }
+    }
+
+    .square-blocks {
+        width: $container-m;
+    }
+
+    aside {
+        float: none;
+        margin-bottom: 20px;
+        top: 0;
+        width: 100%;
+
+        &.fixed {
+            position: relative;
+        }
+    }
+
+    .vehicle-details .btn {
+        padding: 10px;
+        position: fixed;
+        right: 0;
+        top: 70px;
+        width: 100%;
+        z-index: 9;
+
+        &:hover {
+            
+        }
+    }
+}
+
+@media screen and (max-width: 959px) {
+    .my-vehicles, .form-search {
+        width: $container-m;
+    }
+
+    .form-search .ipt {
+        width: 42%;
+    }
+
+    .form-search .btn {
+        width: 12%;
+    }
+
+    .companys .container-company .logo img {
+        max-height: 90%;
+    }
+}
+
+@media screen and (max-width: 699px) {
+    .site {
+        padding-bottom: 275px;
+    }
+
+    .container, .container-m, .my-vehicles, .form-search {
+        max-width: $smartphone-container;
+
+        &.interna {
+            padding: 10px 0 20px;
+        }
+
+        &.interna.com-padding-40 {
+            padding-top: 40px;
+        }
+    }
+
+    h1 {
+        font-size: $size-base * 2.13;
+        line-height: $size-base * 2.13;
+    }
+
+    h2 {
+        font-size: $size-base * 1.8;
+        line-height: $size-base * 1.8;
+    }
+
+    p, a {
+        /*font-size: $size-base;*/
+    }
+
+    .ipt, .slc, .btn {
+        &.half {
+            width: 100%;
+
+            &:last-of-type {
+                float: none;
+            }
+        }
+    }
+
+    .selectric-half {
+        float: none;
+        width: 100%;
+
+        &:last-of-type {
+            float: none;
+        }
+
+        &.selectricOpen .selectricItems {
+            margin-top: 0;
+        }
+    }
+
+    .site.interna {
+        padding: 100px 0 300px;
+    }
+
+    .ico-menu {
+        &.open {
+            margin-right: calc(100% - 45px) !important;
+
+            @include transitions(all, 1s);
+        };
+    }
+
+    nav.menu {
+
+        &.open {
+            width: calc(100% - 55px) !important;
+        }
+    }
+
+    footer {
+        height: 275px !important;
+        padding: 20px 0 15px !important;
+        
+        ul li {
+            border-right: none !important;
+            display: block;
+            padding: 5px !important;
+        }
+
+        .bg-modal-content .close-modal {
+            left: 83%;
+        }
+    }
+
+    .row .col {
+        float: none;
+        width: colunas(1) !important;
+    }
+
+    .company-details, .vehicle-details {
+        padding: 15px;
+        width: 100%;
+
+        i {
+            float: none;
+            text-align: left;
+            margin: 0 0 10px 0;
+        }
+
+        p {
+            float: none;
+        }
+    }
+
+    .banner {
+        background: url(../img/banner.jpg) no-repeat -250px -440px;
+        height: 280px;
+        padding-top: 50px;
+    }
+
+    .form-search .ipt, .form-search .btn {
+        width: 100%;
+    }
+
+    .companys .container-company {
+        height: auto;
+        
+        .logo {
+            float: none;
+            height: 150px;
+            width: 100%;
+
+            img {
+                max-height: 140px;
+            }
+        }
+
+        .details {
+            float: none;
+            width: 100%;
+        }
+    }
+
+    .rating {
+        bottom: 0;
+        height: 15px;
+        position: relative;
+    }
+
+    .square-blocks {
+        width: $smartphone-container;
+    }
+
+    footer {
+        .bg-modal-content {
+            .modal {
+                margin-left: -145px !important;
+                width: 290px !important;
+
+                &.cadastro {
+                    padding: 50px 35px !important;
+
+                    .circle-link {
+                        margin-left: 7px !important;
+                    }
+                }
+            }
+        }
+    }
+
+    .vehicles {
+        .vehicle {
+            height: auto;
+        }
+    }
+}

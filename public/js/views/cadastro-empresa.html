@@ -1,0 +1,49 @@
+<div class="container interna">
+
+	<h1 class="upper center">Cadastro</h1><br>
+
+	<div class="container-p">
+		<form name="form-cadastro" action="javascript:;" ng-submit="save()">
+			<input type="text" name="ipt-name" class="ipt" placeholder="Nome proprietário" ng-model="company.responsible" required>
+
+			<p>Dados da empresa</p>
+
+			<input type="text" name="ipt-razao" class="ipt" placeholder="Razão social" ng-model="company.name" required>
+			<input type="text" name="ipt-cnpj" class="ipt" placeholder="CNPJ" data-mask="cnpj" ng-model="company.cnpj" required>
+			<input type="tel" name="ipt-telephone" class="ipt" placeholder="Telefone" data-mask="tel" ng-model="company.phone" required>
+			<input type="file" name="ipt-attachment" id="iptAttachment" class="file" ng-model="company.image">
+			<label for="iptAttachment" id="lblAttachment" onclick="upload();">
+				<i class="fa fa-upload"></i> <span>Imagem de perfil</span>
+			</label>
+			
+			<p>Dados de acesso</p>
+
+			<input type="email" name="ipt-email" class="ipt" placeholder="E-mail" ng-model="company.access.email" required>
+			<input type="password" name="ipt-pass" class="ipt" placeholder="Senha" ng-model="company.access.password" required>
+			<!-- <input type="password" name="ipt-confirm-pass" class="ipt" placeholder="Confirmar senha" ng-model="company.access.password"> -->
+
+			<p>Dados de endereço</p>
+
+			<input type="text" name="ipt-cep" class="ipt" placeholder="CEP" data-mask="cep" ng-model="company.address.zipcode" required>
+			<input type="text" name="ipt-address-street" class="ipt" placeholder="Endereço" ng-model="company.address.street" required>
+			<input type="text" name="ipt-complement" class="ipt" placeholder="Complemento" ng-model="company.address.complement" required>
+			<input type="text" name="ipt-address-number" class="ipt" placeholder="Número" ng-model="company.address.number" required>
+			<input type="text" name="ipt-address-district" class="ipt" placeholder="Bairro" ng-model="company.address.neighborhood" required>
+			<input type="text" name="ipt-address-city" class="ipt" placeholder="Cidade" ng-model="company.address.city" required>
+			<select name="slc-address-state" class="slc" ng-model="company.address.state" required>	
+				<option value="ES">Espírito Santo</option>
+				<option value="MG">Minas Gerais</option>
+				<option value="RJ">Rio de Janeiro</option>
+				<option value="SP">São Paulo</option>
+			</select>
+
+			<div>
+				<input type="checkbox" name="chk-terms" id="chk-terms" class="chk" value="" ng-model="company.termsAccepted" required>
+            	<label for="chk-terms"><span></span>Aceito os termos de uso</label>
+            </div>
+
+			<input type="submit" class="btn primary" value="Cadastrar">
+		</form>
+	</div>
+
+</div>

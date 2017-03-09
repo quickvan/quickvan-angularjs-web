@@ -1,0 +1,190 @@
+header {
+	background-color: $blue;
+	height: 70px;
+	top: 0;
+	width: 100%;
+	z-index: 100;
+
+	@extend %fixed;
+}
+
+.ico-bell {
+    margin-right: 20px;
+    margin-top: 28px; 
+    text-decoration: none;
+    
+	@extend %float-right;	
+	@extend %relative;	
+
+	&.com-notificacao {
+		color: #cddc39;
+	}
+
+	span {
+		background: $white;
+		color: $blue;
+		font-size: 10px;
+		height: 14px;
+    	padding-top: 3px;
+    	right: -8px;
+    	text-align: center;
+		top: 11px;
+    	width: 14px;
+
+		@include b-radius(100%);
+		@extend %absolute;
+	}
+}
+
+.ico-menu {
+	border-bottom: none;
+	cursor: pointer;
+	height: 25px;
+	margin-top: 22.5px;
+	width: 20px;
+
+	@extend %relative;
+	@extend %float-right;
+	@include transitions(all, 1s);
+
+	&.open {
+		margin-right: 320px;
+		width: 35px;
+
+		@include transitions(all, 1s);
+	};
+
+	span {
+		background-color: $white;
+		height: 4px;
+		top: 10px;
+
+		@extend %block;
+		@extend %relative;
+		@include box-shadow(1px, 1px, 2px, #383838);
+
+		&:before, &:after {
+			content: ' ';
+			background-color: $white;
+			height: 4px;
+
+			@extend %block;
+			@extend %relative;
+			@include box-shadow(1px, 1px, 2px, #383838);
+		};
+
+		&:before {
+			top: -10px;
+		};
+
+		&:after {
+			top: 6px;
+		};
+	}
+}
+
+nav.menu {
+	background-color: $blue;
+	height: 100%;
+	overflow: auto;
+	right: -310px;
+	top: 0;
+	z-index: 100;
+	width: 300px;
+
+	@extend %fixed;
+	@include transitions(all, 1s);
+	@include box-shadow(-1px, 0, 5px, #383838);
+
+	&.open {
+		right: 0;
+		width: 300px;
+
+		@include transitions(all, 1s);
+	}
+
+	ul {
+		list-style: none;
+
+		li {
+
+			border-bottom: 1px solid $strong-blue;
+			padding: 15px 0;
+
+			@extend %right;
+
+			&.login {
+				background-color: $strong-blue;
+				/*height: 70px;*/
+				line-height: 68px;
+				padding: 0;
+
+				ul {
+					li {
+						line-height: 18px;
+					}
+				}
+
+				span.user {
+					background-color: $white;
+					display: inline-block;
+					height: 40px;
+					margin-left: 7px;
+					top: 12px;
+					width: 40px;
+
+					@include b-radius(100%);
+					@extend %relative;
+					@extend %center;
+
+					i {
+						color: $strong-blue;
+					    position: relative;
+					    top: -12px; 
+					}
+				}
+			};
+
+			a {
+				color: $white;
+				font-family: $font-family-gibson-light;
+				padding-right: 15px;
+				text-decoration: none;
+
+				&:hover {
+					opacity: .8 !important;
+				};
+
+				span.seta {
+					display: inline-block;
+				    background: url(../img/ico-arrow-down.png) no-repeat;
+				    background-position: center center;
+				    background-size: 15px;
+				    height: 10px;
+				    width: 26px;
+
+				    @include transitions(all, .5s);
+
+				    &.open {
+				    	@include transitions(all, .5s);
+				    	@include rotates(180deg);
+				    }
+				}
+			}
+
+			ul {
+				margin-top: 15px;
+
+				@extend %none;
+
+				li {
+					border: none;
+
+					a {
+						padding-right: 30px;
+					}
+				}
+			}
+		}
+	}
+}

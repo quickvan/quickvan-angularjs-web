@@ -1,0 +1,87 @@
+<footer>
+	<div class="container clear center">
+		<ul>
+			<li><a href="javascript:;" class="evtOpenModal" data-modal-rel="cadastro">Cadastre-se</a></li>
+			<!-- <li><a href="index.html#!/como-funciona">Como Funciona</a></li> -->
+			<li><a href="index.html#!/termos">Termos</a></li>
+			<li><a href="index.html#!/politicas">Políticas</a></li>
+			<li><a href="index.html#!/contato">Contato</a></li>
+		</ul>
+
+		<div class="social">
+			<a href="#"><i class="fa fa-facebook"></i></a>
+			<a href="#"><i class="fa fa-twitter"></i></a>
+			<a href="#"><i class="fa fa-instagram"></i></a>
+		</div>
+
+		<p class="copy">Copyright &copy; 2017</p>
+	</div>
+
+	<div class="bg-modal-content">
+		<a href="javascript:;" class="close-modal evtCloseModal"><span></span></a>
+
+		<div class="modal cadastro" data-modal="cadastro">
+			<!-- <a href="javascript:;" class="close-modal evtCloseModal"><span></span></a> -->
+
+			<a href="index.html#!/cadastro-pessoa" class="evtCloseModal circle-link">Usuário</i></a>
+			<a href="index.html#!/cadastro-empresa" class="evtCloseModal circle-link">Empresa</i></a>
+		</div>
+
+		<div class="modal delete" data-modal="vehicle">
+			<p class="center">Tem certeza que deseja excluir o veículo?</p>
+
+			<a href="javascript:;" ng-click="" class="btn success">Sim</a>
+			<a href="javascript:;" class="btn primary evtCloseModal">Não</a>
+		</div>
+
+		<div class="modal delete" data-modal="travel">
+			<p class="center">Tem certeza que deseja cancelar a viagem?</p>
+
+			<a href="javascript:;" ng-click="" class="btn success">Sim</a>
+			<a href="javascript:;" class="btn primary evtCloseModal">Não</a>
+		</div>
+
+		<div class="modal contratar" data-modal="contratar">
+			<!-- <a href="javascript:;" class="close-modal evtCloseModal"><span></span></a> -->
+
+			<form class="container-m right" name="form-contratar" action="javascript:;" ng-submit="" >
+				<div>
+					<input type="checkbox" name="chk-ida" id="chk-ida" class="chk evtClickCheck" value="">
+	            	<label for="chk-ida"><span></span>Somente ida</label>
+	            </div>
+
+				<div class="clearfix">
+					<input type="text" name="ipt-travel-date" class="ipt half" placeholder="Data da ida" required data-mask="data">
+					<input type="text" name="ipt-travel-hour" class="ipt half" placeholder="Horário" required data-mask="horario">
+				</div>
+				<div class="clearfix">
+					<input type="text" name="ipt-travel-date-back" class="travelDateBack ipt half" placeholder="Data da volta" data-mask="data">
+					<input type="text" name="ipt-travel-hour-back" class="travelDateBack ipt half" placeholder="Horário" data-mask="horario">
+				</div>
+
+				<input type="text" name="ipt-travel-origin" class="ipt" placeholder="Origem" required>
+				<input type="text" name="ipt-travel-destination" class="ipt" placeholder="Destino" required>
+				<input type="number" name="ipt-number-passengers" class="ipt" placeholder="Número de passageiros" required>
+				
+				<input type="submit" class="btn primary" value="Solicitar agendamento">
+			</form>
+		</div>
+
+		<div class="modal avaliation" data-modal="avaliation">
+			<div class="rating available clear">
+			    <input type="radio" id="star5" name="rating" value="5">
+			    <label for="star5"></label>
+			    <input type="radio" id="star4" name="rating" value="4">
+			    <label for="star4"></label>
+			    <input type="radio" id="star3" name="rating" value="3">
+			    <label for="star3"></label>
+			    <input type="radio" id="star2" name="rating" value="2">
+			    <label for="star2"></label>
+			    <input type="radio" id="star1" name="rating" value="1">
+			    <label for="star1"></label>
+			</div>
+
+			<a href="javascript:;" class="btn primary evtCloseModal">Avaliar</a>
+		</div>
+	</div>
+</footer>
