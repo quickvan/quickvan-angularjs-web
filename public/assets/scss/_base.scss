@@ -1,0 +1,362 @@
+* {
+    margin: 0;
+    padding: 0;
+
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    
+    -moz-appearance: none;
+    -o-appearance: none;
+    -webkit-appearance: none;
+
+    outline: none;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    background-color: $bg-color-base;
+    color: $color-base;
+    font-family: $font-family-base;
+    font-size: $size-base;
+}
+
+h1 {
+    font-size: $size-base * 2.8;
+    font-weight: normal;
+    letter-spacing: 2px;
+    line-height: $size-base * 2.8;
+    text-shadow: 1px 1px $dark-gray;
+    margin: 15px 0;
+}
+
+h2 {
+    font-size: $size-base * 2.4;
+    font-weight: normal;
+    line-height: $size-base * 2.4;
+    margin: 15px 0;
+
+    &.left-border {
+        border-left: 2px solid $white;
+        padding-left: 10px;
+    }
+}
+
+h3 {
+    font-size: $size-base * 2;
+    font-weight: normal;
+    letter-spacing: 2px;
+    line-height: $size-base * 2;
+    margin: 0 0 10px;
+}
+
+p {
+    font-size: $size-base * 1.2;
+    line-height: $size-base * 1.5;
+    margin-bottom: 10px;
+}
+
+a {
+    color: $white;
+    font-size: $size-base * 1.2;
+    margin-bottom: 10px;
+    text-decoration: underline;
+
+    &:hover {
+        text-decoration: none;
+    }
+}
+
+a.transparent {
+    border-bottom: none;
+    left: 0;
+    z-index: 9;
+
+    @extend %absolute;
+}
+
+ul {
+    list-style: none;
+}
+
+.gibson-light {
+    font-family: $font-family-gibson-light;
+}
+
+.link-home {
+    font-family: "Angelina";
+    font-size: 50px;
+    margin-bottom: 0;
+    margin-left: 20px;
+    text-decoration: none;
+    text-shadow: 2px 2px $dark-gray;
+    top: 15px;
+
+    @extend %absolute;
+    @include transitions(all, .5s);
+
+    &:hover {
+        color: $dark-gray;
+        text-shadow: 2px 2px $white;
+    }
+}
+
+.white {
+    color: $white;
+}
+
+.full-content {
+    height: 100%; 
+    width: 100%;
+}
+
+.d-table {
+    display: table;
+}
+
+.d-table-cell {
+    display: table-cell;
+}
+
+.v-align-middle {
+    vertical-align: middle;
+}
+
+span.v-align-middle {
+    display: inline-block;
+    height: 100%;
+}
+
+.clear, .clear:before, .clear:after {
+    clear: both;
+    content: '';
+    display: table;
+}
+
+.center {
+    @extend %center;
+}
+
+.upper {
+    text-transform: uppercase;
+}
+
+.strong-blue {
+    color: $strong-blue;
+}
+
+.bold {
+    font-family: $font-family-gibson-semibold;
+}
+
+.size-p {
+    font-size: $size-base * 1;
+}
+
+.hide {
+    @extend %none;
+}
+
+.left {
+    @extend %float-left;
+}
+
+.right {
+    @extend %float-right;
+}
+
+.fixed {
+    @extend %fixed;
+}
+
+.blue {
+    color: $blue;
+}
+
+/* FORMS */
+
+.ipt, .slc {
+    color: $dark-gray;
+    font-size: $size-base * 1.2;
+    font-family: $font-family-gibson-light;
+    margin-bottom: 15px;
+    padding: 10px 15px;
+    width: 100%;
+
+    @include border(1px, solid, $gray);
+
+    &.medium {
+        height: 100px;
+        resize: none;
+    }
+
+    &:focus {
+        border: 1px solid $color-base;
+    }
+
+    &.half {
+        width: 48%;
+
+        &:last-of-type {
+            @extend %float-right;
+        }
+    }
+}
+
+.selectric-half {
+    width: 48%;
+
+    @extend %float-left;
+
+    &:last-of-type {
+        @extend %float-right;
+    }
+
+    &.selectricOpen .selectricItems {
+        margin-top: -15px;
+    }
+}
+
+.file {
+    opacity: 0;
+    width: 0;
+    z-index: -1;
+
+    @extend %absolute;
+}
+
+.file + label {
+    color: $dark-gray;
+    cursor: pointer;
+    font-size: $size-base * 1.2;
+    font-family: $font-family-gibson-light;
+    margin-bottom: 15px;
+    overflow: hidden;
+    padding: 10px 15px;
+    width: 100%;
+
+    @include border(1px, solid, $gray);
+    @extend %inline-block;
+}
+
+.file + label.has-file {
+    color: #000000 !important;
+}
+
+input[readonly] {
+    opacity: .5;
+}
+
+input[disabled] {
+    cursor: no-drop;
+}
+
+.form-search {
+    .ipt { 
+        margin-right: 1.5%;
+        width: 43%;
+    }
+
+    .btn {
+        padding: 10px 15px;
+        width: 10%; 
+    }
+}
+
+.btn {
+    color: $white;
+    cursor: pointer;
+    font-size: $size-base * 1.2;
+    font-family: $font-family-gibson-light;
+    margin-bottom: 15px;
+    padding: 15px;
+    text-decoration: none;
+    width: 100%;
+
+    @extend %center;
+
+    &.success {
+        background-color: $green;
+        border-bottom: 2px solid $green-secondary !important;
+
+        @include border(1px, solid, $green);
+    }
+
+    &.primary {
+        background-color: $blue;
+        border-bottom: 2px solid $blue-secondary !important;
+
+        @include border(1px, solid, $blue);
+    }
+
+    &.cancel {
+        background-color: $red;
+        border-bottom: 2px solid $red-secondary !important;
+
+        @include border(1px, solid, $red);
+    }
+
+    &:hover {
+        opacity: .8;
+    }
+
+    &:focus {
+        border: 1px solid $white;
+    }
+
+    &.half {
+        width: 48%;
+
+        &:last-of-type {
+            @extend %float-right;
+        }
+    }
+}
+
+.chk ~ label {
+    color: $dark-gray;
+    font-family: $font-family-gibson-light;
+    font-size: $size-base * 1.2;
+    left: -2px;
+    margin-bottom: 15px;
+
+    @extend %inline-block;
+    @extend %relative;
+
+    span {
+        height: 20px;
+        margin-right: 10px;
+        top: 3px;
+        width: 20px;
+
+        @include border(1px, solid, $gray);
+        @extend %left;
+        @extend %inline-block;
+        @extend %relative;
+
+        &:before {
+            color: $blue;
+            content: "\f00c";
+            font-family: 'FontAwesome';
+            height: 10px;
+            opacity: 0;
+            width: 10px;
+
+            @extend %absolute;
+            @include transitions(all, .3s);
+        };
+    }
+}
+
+.chk:checked ~ label {
+    span {
+        &:before {
+            opacity: 1;
+        }      
+    }
+}

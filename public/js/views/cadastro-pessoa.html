@@ -1,0 +1,44 @@
+<div class="container interna">
+
+	<h1 class="upper center">Cadastro</h1><br>
+
+	<div class="container-p">
+		<form name="form-cadastro-pf" action="javascript:;" ng-submit="save()">
+			<input type="text" name="ipt-name" class="ipt" placeholder="Nome" required ng-model="person.name">
+			<input type="tel" name="ipt-telephone" class="ipt" placeholder="Telefone" data-mask="tel">
+			<input type="file" name="ipt-attachment" id="iptAttachment" class="file">
+			<label for="iptAttachment" id="lblAttachment" onclick="upload();">
+				<i class="fa fa-upload"></i> <span>Imagem de perfil</span>
+			</label>
+
+			<p>Dados de acesso</p>
+
+			<input type="email" name="ipt-email" class="ipt" placeholder="E-mail" required>
+			<input type="password" name="ipt-pass" class="ipt" placeholder="Senha" required>
+			<!-- <input type="password" name="ipt-confirm-pass" class="ipt" placeholder="Confirmar senha" required> -->
+
+			<p>Dados de endereço</p>
+
+			<input type="text" name="ipt-cep" class="ipt" placeholder="CEP" data-mask="cep" required>
+			<input type="text" name="ipt-address-street" class="ipt" placeholder="Endereço" required>
+			<input type="text" name="ipt-complement" class="ipt" placeholder="Complemento" required>
+			<input type="text" name="ipt-address-number" class="ipt" placeholder="Número" required>
+			<input type="text" name="ipt-address-district" class="ipt" placeholder="Bairro" required>
+			<input type="text" name="ipt-address-city" class="ipt" placeholder="Cidade" required>
+			<select name="slc-address-state" class="slc" required>	
+				<option value="ES">Espírito Santo</option>
+				<option value="MG">Minas Gerais</option>
+				<option value="RJ">Rio de Janeiro</option>
+				<option value="SP">São Paulo</option>
+			</select>
+
+			<div>
+				<input type="checkbox" name="chk-terms" id="chk-terms" class="chk" value="">
+            	<label for="chk-terms"><span></span>Aceito os termos de uso</label>
+            </div>
+
+			<input type="submit" class="btn primary" value="Cadastrar">
+		</form>
+	</div>
+
+</div>

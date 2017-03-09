@@ -1,0 +1,42 @@
+/* FONT PATH
+ * -------------------------- */
+
+@font-face {
+  	font-family: 'Gibson-Regular';
+	src: url('#{$font-path-base}/Gibson-Regular/gibson-regular.eot'),
+		 url('#{$font-path-base}/Gibson-Regular/gibson-regular.otf'),
+		 url('#{$font-path-base}/Gibson-Regular/gibson-regular.svg'),
+		 url('#{$font-path-base}/Gibson-Regular/gibson-regular.ttf'),
+		 url('#{$font-path-base}/Gibson-Regular/gibson-regular.woff');
+  	font-weight: normal;
+  	font-style: normal;
+}
+
+@font-face {
+  	font-family: 'Gibson-Light';
+	src: url('#{$font-path-base}/Gibson-Light/gibson-light.eot'),
+		 url('#{$font-path-base}/Gibson-Light/gibson-light.otf'),
+		 url('#{$font-path-base}/Gibson-Light/gibson-light.svg'),
+		 url('#{$font-path-base}/Gibson-Light/gibson-light.ttf'),
+		 url('#{$font-path-base}/Gibson-Light/gibson-light.woff');
+  	font-weight: normal;
+  	font-style: normal;
+}
+
+@font-face {
+  	font-family: 'Gibson-SemiBold';
+	src: url('#{$font-path-base}/Gibson-SemiBold/gibson-semibold.eot'),
+		 url('#{$font-path-base}/Gibson-SemiBold/gibson-semibold.otf'),
+		 url('#{$font-path-base}/Gibson-SemiBold/gibson-semibold.svg'),
+		 url('#{$font-path-base}/Gibson-SemiBold/gibson-semibold.ttf'),
+		 url('#{$font-path-base}/Gibson-SemiBold/gibson-semibold.woff');
+  	font-weight: normal;
+  	font-style: normal;
+}
+
+@font-face {
+  	font-family: 'Angelina';
+	src: url('#{$font-path-angelina}/angelina.ttf');
+  	font-weight: normal;
+  	font-style: normal;
+}

@@ -1,0 +1,16 @@
+<form name="formCompany" action="javascript:;" ng-submit="save()">
+	<input type="text" name="name" ng-model="company.name" placeholder="name" required>
+	<input type="email" name="email" ng-model="company.email" placeholder="E-mail" required>
+	<input type="text" name="description" ng-model="company.description" placeholder="Description" required>
+	<input type="submit" name="btnSubmit" ng-show="!isEdit" value="cadastrar">
+	<input type="submit" name="btnSubmit" ng-show="isEdit" value="editar">
+	<input type="button" name="btnSubmit" ng-click="cancelar()" ng-show="isEdit" value="cancelar">
+</form>
+
+<ul>
+	<li ng-repeat="company in companies">
+		{{ ::company.name }}
+		<a href="javascript:;" ng-click="remove(company._id)">delete</a>
+		<a href="javascript:;" ng-click="edit(company)">update</a>
+	</li>
+</ul>

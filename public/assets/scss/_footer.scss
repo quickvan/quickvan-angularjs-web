@@ -1,0 +1,187 @@
+footer {
+	bottom: 0;
+	border-top: 1px solid $color-base;
+	height: 180px;
+	padding: 35px 0 30px;
+	width: 100%;
+
+	@extend %absolute;
+
+	ul {
+		margin-bottom: 25px;
+
+		li {
+			border-right: 1px solid $strong-blue;
+			padding: 0 15px;
+
+			@extend %inline-block;
+
+			&:last-of-type {
+				border-right: none;
+			};
+
+			a {
+				color: $black;
+				font-family: $font-family-gibson-light;
+				text-decoration: none;
+
+				&:hover {
+					color: $strong-blue;
+				};
+			}
+		}
+	}
+
+	.social {
+		
+		a {
+			background-color: $strong-blue;
+			border-bottom: none;
+			color: $white;
+		    display: inline-block;
+		    height: 40px;
+		    margin-bottom: 0;
+		    padding: 12px 0;
+		    text-align: center;
+		    width: 40px;
+
+		    @include transitions(all, 1s);
+
+		    &:hover {
+		    	background-color: $white;
+				color: $strong-blue;
+		    };
+		}
+	}
+
+	p.copy {
+		font-size: $size-base * 0.8;
+		margin: 15px 0 0;
+	}
+
+	.bg-modal-content {
+		background-color: rgba(0, 0, 0, 0.2);
+		height: 100%;
+		position: fixed;
+		top: 0;
+		width: 100%;
+		z-index: 999;
+
+		@extend %none;
+
+		.close-modal {
+			background-color: #FFF;
+		    height: 30px;
+		    left: 50%;
+		    margin-left: -15px;
+		    top: calc(5% - 15px);
+		    z-index: 999;
+		    width: 30px;
+
+			@extend %absolute;
+			@include b-radius(100%);
+			@include box-shadow(3px, 3px, 0px, rgba(118, 115, 115, .5));
+
+			span {
+				background-color: $black;
+				height: 20px;
+				margin: 0 auto;
+				top: 5px;
+				width: 2px;
+
+				@include rotates(45deg);
+				@extend %relative;
+				@extend %block;
+
+				&:before {
+					background-color: $black;
+					content: " ";
+					height: 20px;
+					margin: 0 auto;
+					width: 2px;
+
+					@include rotates(90deg);
+					@extend %relative;
+					@extend %block;
+				};
+			}
+		}
+
+		.modal {
+			background-color: $white;
+			/*min-height: 200px;*/
+			left: 50%;
+			margin-left: -200px;
+			max-height: 90%;
+			overflow: auto;
+			padding: 20px;
+			top: -100%;
+			width: 400px;
+
+			@extend %absolute;
+			@include box-shadow(3px, 3px, 0px, rgba(118, 115, 115, .5));
+
+			.btn {
+				margin-bottom: 0 !important;
+
+				@extend %block;
+			}
+
+			&.active {
+				top: 5%;
+
+				@include transitions(all, .2s);
+			}
+
+			&.cadastro {
+				padding: 20px 40px;
+
+				.circle-link {
+					background: $blue;
+					font-family: 'Gibson-Light';
+					height: 100px;
+					margin-bottom: 0;
+					margin-left: 38px;
+					padding-top: 43px;
+					text-decoration: none;
+				    width: 100px;
+				    				    
+				    @include b-radius(100%);
+				    @extend %block;
+				    @extend %float-left;
+				    @extend %center;
+
+				    &:hover {
+				    	@include opacity(.7);
+				    }
+				}
+			}
+
+			&.delete {
+				padding: 20px 40px;	
+
+				.btn {
+					padding: 10px !important;
+					width: 49%;
+
+					@extend %center;
+					@extend %inline-block;
+				}
+			}
+
+			&.avaliation {
+				.rating {
+					bottom: auto;
+					margin: 0 auto 15px;
+
+					@extend %relative;
+
+					&>label {
+        				color: $gray;
+        				font-size: $size-base * 1.7;
+        			}
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,488 @@
+.container {
+    margin: 0 auto;
+    width: $desktop-container;
+
+    @extend %relative;
+
+    &.interna {
+        padding: 40px 0;
+    }
+}
+
+.container-960 {
+    margin: 0 auto;
+    max-width: $container-g;
+
+    @extend %relative;
+}
+
+.container-m {
+    margin: 0 auto;
+    max-width: $container-m;
+
+    @extend %relative;
+
+    &.interna {
+        padding: 40px 0;
+    }
+}
+
+.container-p {
+    margin: 0 auto;
+    max-width: $container-p;
+
+    @extend %relative;
+
+    &.interna {
+        padding: 40px 0;
+    }
+}
+
+/* COLUMNS */
+
+.row .col {
+    width: colunas(4);
+
+    @extend %float-left;
+}
+
+.site {
+    min-height: 100%;
+    padding: 70px 0 180px;
+
+    @extend %relative;
+}
+
+.banner {
+    /*background-color: rgba(173, 216, 230, .7);*/
+    background: url(../img/banner.jpg) no-repeat 0 -300px;
+    
+    padding-top: 140px;
+    height: 400px;
+}
+
+.form-search {
+    margin: 0 auto;
+    max-width: 800px;
+
+    @extend %center;
+
+    .row .col {
+        width: colunas(2);
+    }
+}
+
+.how-it-work { 
+    background-color: #EEEEEE;
+    padding: 45px 0;
+
+    .row .col {
+        width: colunas(3);
+
+        p {
+            margin-top: 15px;
+        }
+    }
+
+    &.interna {
+        background-color: transparent;
+    }
+}
+
+.near-me {
+    padding: 45px 0;
+
+    .maps {
+        /*background: url(../img/maps.jpg) no-repeat;*/
+        height: 300px;
+    }
+}
+
+.form-company {
+    @extend %none;
+}
+
+.companys .container-company {
+    height: 200px;
+    margin: 0 auto 40px;
+    max-width: 1000px;
+
+    @extend %relative;
+    @include box-shadow(3px, 5px, 10px, $light-gray);
+    @include border(1px, solid, $light-gray);
+
+    .logo {
+        height: 100%;
+        width: 30%;
+
+        @extend %center;
+        @extend %float-left;
+    }
+
+    .details {
+        background-color: $blue;
+        height: 100%;
+        padding: 30px;
+        width: 70%;
+
+        @extend %relative;
+        @extend %float-left;
+
+        p, h3, a {
+            color: $white;   
+        }
+
+        h3 {
+            margin-bottom: 20px;
+        }
+    }
+}
+
+.pagination {
+    @extend %center;
+
+    a {
+        border-bottom: none;
+        color: $color-base;
+        font-size: $size-base * 1.4;
+        margin-right: 10px;
+        text-decoration: none;
+
+        &.active {
+            border-bottom: 1px solid $gray;
+            font-size: $size-base * 1.6;
+        }
+    }
+}
+
+.rating { 
+    bottom: 30px;
+
+    @extend %absolute;
+
+    &>input {
+        display: none;
+
+        &.check {
+            &~label {
+                color: #cddc39;
+            }
+        }
+    }
+
+    &>label {
+        &:before {
+            content: "\f005";
+            font-family: FontAwesome;
+            font-size: 1em;
+            margin-right: 5px;
+
+            @extend %inline-block;
+        };
+    }
+
+    &>label {
+        color: $white;
+
+        @extend %float-right;
+    }
+
+    &.available {
+        &>input:checked ~ label, &:not(:checked) > label:hover, &:not(:checked) > label:hover ~ label {
+            color: #cddc39 !important;             
+        };
+    }
+}
+
+.company-details, .vehicle-details {
+    background-color: $light-blue;
+    margin: 0 auto;
+    padding: 40px;
+    width: 90%;
+
+    @extend %relative;
+
+    .logo {
+        background-color: $white;
+        height: 220px;
+        margin-right: 50px;
+        width: 350px;
+
+        @extend %center;
+    }
+
+    i {
+       color: $white; 
+       margin-right: 10px;
+       width: 40px;
+
+       @extend %inline-block;
+       @extend %center;
+    }
+
+    p {
+        color: $white;
+        line-height: $size-base * 1.73;
+        margin-bottom: 0;
+    }
+}
+
+.vehicle-details {
+    .btn {
+        right: 40px;
+        top: 40px;
+        width: 200px;
+
+        @extend %absolute;
+    }
+
+    ul {
+        li {
+            color: $white;
+            font-family: $font-family-gibson-light;
+            padding: 5px 0;
+
+            span {
+                padding-right: 5px;
+            }
+        }
+    }
+}
+
+.vehicles {
+    margin: 40px auto 10px;
+    width: 90%;
+
+    .vehicle {
+        height: 280px;
+        margin: 20px auto 0;
+        width: 90%;
+
+        @extend %relative;
+
+        .thumb-image {
+            height: 150px;
+            margin-bottom: 10px; 
+
+            @include border(1px, solid, $gray);
+
+            img {
+                max-height: 100%;
+                width: 100%;
+            }
+        }
+
+        ul {
+            li {
+                font-family: $font-family-gibson-light;
+                padding: 5px 0;
+
+                span {
+                    padding-right: 5px;
+                }
+            }
+        }
+
+        /*@include box-shadow(3px, 3px, 0px, rgba(118, 115, 115, .5));
+        @include border(1px, solid, $gray);*/
+
+        &:hover .contratar {
+            /*background-color: #858585;*/
+            background-color: transparent;
+            height: 115px;
+            margin-top: -57.5px;
+            top: 50%;
+            width: 100%;
+
+            @extend %block;
+            @extend %absolute;
+            @include transitions(all, .3s);
+
+            .btn {
+                margin: 10px auto;
+                padding: 10px;
+                text-decoration: none;
+                width: 90%;
+
+                @extend %block;
+                @extend %center;
+                @include transitions(all, .3s);
+
+                &:hover {
+                    @include opacity(1);   
+                }
+            }
+        }
+
+        .contratar .btn {
+            @extend %none;           
+        }
+    }
+}
+
+.square-blocks {
+    margin: 0 auto;
+    width: $container-g;
+
+    .block {
+        height: 150px;
+        margin: 10px auto;
+        padding: 15px;
+        width: 95%;
+
+        @extend %relative;
+        @include border(1px, solid, $gray);
+
+        a {
+            color: $black;
+            font-size: $size-base * 1.7;
+            margin-left: 5px;
+
+            &.link-edit {
+                margin-top: 2px;
+            }
+
+            &.full-content.transparent {
+                margin-bottom: 0;   
+                margin-left: 0;
+                top: 0;
+            }
+
+            &.link-star {
+                color: #cddc39;
+            }
+        }
+
+        p {
+            color: $black;
+            font-family: $font-family-gibson-light;
+            font-size: $size-base * 1.1;
+        }
+
+        &.new-vehicle {
+            @extend %center;
+            @include border(2px, dashed, $gray); 
+
+            span {
+                color: $dark-gray;
+                padding-top: 30px;
+            }
+        }
+    }
+}
+
+.legend {
+    font-family: $font-family-gibson-light;
+    line-height: $size-base * 1.5;
+    margin-top: 15px;
+
+    span {
+        top: -4px;
+        width: 30px;
+
+        @extend %relative;
+        @extend %inline-block;
+    }
+}
+
+.confirmed {
+    border-bottom: 3px solid $green !important;
+}
+
+.pending {
+    border-bottom: 3px solid $orange !important;
+}
+
+.new {
+    border-bottom: 3px solid $orange !important;
+}
+
+.canceled {
+    border-bottom: 3px solid $red !important;
+}
+
+.realized {
+    border-bottom: 3px solid $blue !important;
+}
+
+aside {
+    background: $white;
+    top: 75px;
+    width: 230px;
+
+    @include border(1px, solid, $gray);
+    @include box-shadow(3px, 3px, 0px, rgba(118, 115, 115, .5));
+    @extend %float-left;
+
+    ul {
+        li {
+            border-bottom: 1px solid $gray;
+
+            &:last-of-type {
+                border-bottom: none;
+            }
+
+            a {
+                font-family: $font-family-gibson-light;
+                color: $dark-gray;
+                margin-bottom: 0;
+                padding: 15px 10px;
+                text-decoration: none;
+
+                @extend %block;
+
+                &:hover, &.active {
+                    border-left: 2px solid $blue;
+                    margin-left: -2px;
+                    @include opacity(.8);
+                }
+
+                span {
+                    margin-right: 5px;
+                }
+            }
+        }
+    }
+}
+
+#slideVehicle .owl-stage-outer {
+    height: 150px;
+}
+
+#slideVehicle .owl-item .item {
+    border: 1px solid $gray;
+    height: 130px;
+    margin: 0 auto;
+    width: 95% !important;
+}
+
+#slideVehicle .owl-item .item span {
+    display: table-cell;
+    height: 200px;
+    vertical-align: middle;
+    width: 300px;
+}
+
+#slideVehicle .owl-item .item img {
+    margin: 0 auto;
+    max-height: 130px;
+    max-width: 80%;
+}
+
+.prev, .next {
+    background-color: #6082bb;
+    border-radius: 100%;
+    color: #FFF;
+    cursor: pointer;
+    display: block;
+    height: 40px;
+    padding: 12px 14px;
+    position: absolute;
+    top: 80px;
+    width: 40px;
+    z-index: 9;
+}
+
+.next {
+    right: 0;
+}
